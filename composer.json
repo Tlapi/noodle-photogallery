@@ -1,0 +1,35 @@
+{
+	"name" : "mfcc/zendesk-contact",
+	"description" : "Contact-Form using a honeypot for spam-protection and zendesk API for creating ticket",
+	"type" : "library",
+	"authors" : [{
+			"name" : "Jan Tlapak",
+			"email" : "jan@mfcc.cz",
+			"homepage" : "http://www.mfcc.cz",
+			"role" : "Developer"
+		}
+	],
+	"keywords" : [
+		"noodle",
+		"mfcc",
+		"photogallery",
+		"plugin"
+	],
+	"homepage" : "https://github.com/Tlapi/mfcc-zendesk-contact",
+	"license" : [
+		"MIT"
+	],
+	"require" : {
+		"php" : ">=5.3.0",
+		"zendframework/zendframework" : ">=2.1"
+	},
+	"autoload" : {
+		"psr-0" : {
+			"NoodlePhotogallery" : "src"
+		},
+		"classmap" : [
+			"./"
+		]
+	},
+	"minimum-stability" : "dev"
+}

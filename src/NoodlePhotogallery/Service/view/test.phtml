@@ -1,0 +1,44 @@
+<h1>Photogallery</h1>
+
+<?php if(isset($_GET['save'])){?>
+<div class="alert alert-success">
+	<button type="button" class="close" data-dismiss="alert">&times;</button>
+    <strong>Well done!</strong> changes has been saved<br />
+</div>
+<?php }?>
+			
+<form action="?save" method="post">
+<div class="dropzone-previews">
+<?php foreach ($this->photos as $key => $photo){?>
+	<div class="dz-preview dz-processing dz-image-preview dz-success">
+		<div class="dz-details">
+			<div class="dz-filename">
+				<span data-dz-name="">IMG_0034.JPG</span>
+			</div>
+			<!-- 
+			<div class="dz-size" data-dz-size="">
+				<strong>1.5</strong> MB
+			</div> -->
+			<img data-dz-thumbnail="" alt="IMG_0034.JPG" src="../../../../<?php echo $photo?>">  
+		</div>  
+		<a class="dz-remove gal-remove">Remove file</a>
+		<input type="hidden" name="oldfiles[]" value="<?php echo $key?>" />
+	</div>
+<?php }?>
+</div>
+
+<script>
+$('.gal-remove').click(function(){
+	$(this).parent().hide();
+	$(this).parent().find('input').attr('name', 'removeFiles[]');
+	return false;
+});
+</script>
+
+<br style="clear:both" />
+
+<div class="dropzone"></div>
+
+<input type="submit" value="save changes" />
+
+</form>
