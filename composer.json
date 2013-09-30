@@ -1,5 +1,5 @@
 {
-	"name" : "mfcc/zendesk-contact",
+	"name" : "noodle/photogallery",
 	"description" : "Contact-Form using a honeypot for spam-protection and zendesk API for creating ticket",
 	"type" : "library",
 	"authors" : [{
